@@ -1,0 +1,85 @@
+<br>
+
+<h3>ADD A NEW LOCATION</h3>
+
+<p>(specific info about locations) Locations are detailed guides about a specific location, camping spot, or hike to guide Society members on their own photography adventure.</p>
+<br>
+<br>
+
+<div class="row">
+
+
+	<div class="offset-s2 col s5">
+
+			<textarea ng-model="inputTitle" placeholder="TITLE">Title</textarea>
+			<br>
+			<br>
+			<a class="waves-effect waves-light btn">Add a Location/Google Maps connection</a>
+			<br>
+			<br>
+			<br>
+			<h2>Upload image box here here here here here here</h2>
+
+			<br>
+			<br>
+
+			<div class="col s7">
+			<textarea ng-model="theDraw" placeholder="The Draw">The Draw</textarea>
+			<textarea ng-model="theDescription" placeholder="Description">Description</textarea>
+			<textarea ng-model="thePackList" placeholder="Pack List">Pack List</textarea>
+			</div>
+
+<!-- drop downs -->
+			<div class="offset-s1 col s4">
+
+				<div class="input-field">
+				      <select name="" ng-model="dropDownOne">
+					      <option value="" disabled selected >Select a Skill Level</option>
+					      <option ng-value="Beginner">Beginner</option>
+					      <option ng-value="Intermediate">Intermediate</option>
+					      <option ng-value="Expert">Expert</option>
+					    </select>
+					    <label>Skill Level</label>
+				</div>
+
+				<br>
+
+				<div class="input-field">
+				      <select>
+					      <option value="" disabled selected ng-model="dropDownTwo">Choose your option</option>
+					      <option value="1">Option 1</option>
+					      <option value="2">Option 2</option>
+					      <option value="3">Option 3</option>
+					    </select>
+					    <label>Materialize Select</label>
+				</div>
+
+			</div> <!-- end col -->
+
+
+
+			 <button ng-click="buttonClick()" class="btn waves-effect waves-light" type="submit" name="action">Submit
+		    	<i class="material-icons right">send</i>
+		  	</button>
+
+
+
+	</div>
+
+
+	<div class="offset-s1 col s2">
+			<h5>this is a bolded guidline</h5>
+			<p>additional informaiton about the guidline</p>
+			<br>
+			<h5>this is a bolded guidline</h5>
+			<p>additional informaiton about the guidline</p>
+			<br>
+			<h5>this is a bolded guidline</h5>
+			<p>additional informaiton about the guidline</p>
+
+	</div>
+
+
+</div> <!-- row end -->
+
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Society Wild</title>
+
+	<link rel="stylesheet" type="text/css" href="/lib/materialize/dist/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+
+</head>
+<!-- ************************************** -->
+<body ng-app="societyWildApp">
+
+
+<!-- __NAV BAR____________________ -->
+	<div class="navbar-fixed">
+	  <nav>
+	    <div class="nav-wrapper white">
+
+	      <a href="#" class="brand-logo black-text">Logo</a>
+
+	      <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+	        <li><a href="sass.html" class="black-text">Sass</a></li>
+	        <li><a href="badges.html" class="black-text">Components</a></li>
+	        <li><a href="collapsible.html" class="black-text">JavaScript</a></li>
+	      </ul>
+	      </span>
+	    </div>
+	  </nav>
+	</div>
+
+
+<!-- __CONTENT____________________ -->
+
+
+	<div ng-view> <!-- ng-view start -->
+	</div> <!-- ng-view end -->
+
+
+<!-- __FOOTER____________________ -->
+        <footer class="page-footer white border-top">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="black-text">Footer Content</h5>
+                <p class="black-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="black-text">Links</h5>
+                <ul>
+                  <li><a class="black-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="black-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="black-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="black-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright black-text">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="black-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+<!-- end footer -->
+
+
+
+<!-- __SCRIPTS____________________ -->
+<!-- ANGULAR -->
+<script src="/lib/angular/angular.min.js"></script>
+<!-- ANGULAR-ROUTE -->
+<script src="/lib/angular-route/angular-route.min.js"></script>
+<!-- JQUERY -->
+<script src="/lib/jquery/dist/jquery.min.js"></script>
+<!-- MATERIALIZE -->
+<script src="/lib/materialize/dist/js/materialize.min.js"></script>
+<!-- FIREBASE -->
+<script src="/lib/firebase/firebase.js"></script>
+<!-- JS -->
+<script src="app.js"></script>
+<!-- CONTROLLERS -->
+<script src="/controllers/MainCtrl.js"></script>
+<script src="/controllers/MyPageCtrl.js"></script>
+<script src="/controllers/WriteStoryCtrl.js"></script>
+<!-- FACTORIES -->
+<script src="/factories/firebaseFactory.js"></script>
+
+</body>
+</html>
