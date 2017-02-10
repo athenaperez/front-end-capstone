@@ -1,9 +1,38 @@
-<h3>This is the main view</h3>
-<ul>
-	<li>Will Have:</li>
-	<li>xxx</li>
-	<li>xxx</li>
-	<li>xxx</li>
-	<li>xxx</li>
 
-</ul>
+<img src="/css/img/header3.jpg" class="header-main-img">
+
+
+
+
+
+
+
+<div class="row top-cards">
+	<div ng-repeat="story in storyList" class="col l3">
+
+
+	 <div class="card">
+            <div class="card-image">
+              <img src="/css/img/header1.jpg">
+              <span class="card-title">
+				 <a href="#">
+              		<h5> {{story.storyName}}</h5></a></span>
+            </div>
+<!--             <div class="card-content">
+               <p>{{story.storyImage}}</p>
+            </div> -->
+          </div>
+
+
+
+	</div>
+</div>
+
+
+
+
+<div class="row">
+	<div ng-repeat="location in locationList" class="offest-l2 col l2">
+		<p>near you cards</p>
+	</div>
+</div>

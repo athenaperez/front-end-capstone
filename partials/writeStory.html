@@ -6,6 +6,7 @@
 <br>
 <br>
 
+
 <div class="row">
 
 
@@ -15,10 +16,15 @@
 			<br>
 			<br>
 			<a class="waves-effect waves-light btn">Add a Location/Google Maps connection</a>
+
 			<br>
 			<br>
 			<br>
-			<h2>Upload image box here here here here here here</h2>
+
+			<img src="/css/img/header2.jpg" id="upload-placeholder-img">
+
+
+			<input type="file" name="photo" id="fileInput">
 
 			<br>
 			<br>
@@ -30,14 +36,13 @@
 			</div>
 
 <!-- drop downs -->
-			<div class="offset-s1 col s4">
-
+			<div class="offset-s1 col s4"> <!-- dropdown column -->
 				<div class="input-field">
-				      <select name="" ng-model="dropDownOne">
+				      <select id="dropDownOne" name="dropDownOne" ng-model="data.dropDownOne">
 					      <option value="" disabled selected >Select a Skill Level</option>
-					      <option ng-value="Beginner">Beginner</option>
-					      <option ng-value="Intermediate">Intermediate</option>
-					      <option ng-value="Expert">Expert</option>
+					      <option value="option-one">Beginner</option>
+					      <option value="option-two">Intermediate</option>
+					      <option>Expert</option>
 					    </select>
 					    <label>Skill Level</label>
 				</div>
@@ -45,21 +50,21 @@
 				<br>
 
 				<div class="input-field">
-				      <select>
-					      <option value="" disabled selected ng-model="dropDownTwo">Choose your option</option>
-					      <option value="1">Option 1</option>
-					      <option value="2">Option 2</option>
-					      <option value="3">Option 3</option>
+				      <select id="dropDownOne" name="dropDownOne" ng-model="data.dropDownOne">
+					      <option value="" disabled selected >Select a Skill Level</option>
+					      <option value="option-one">Beginner</option>
+					      <option value="option-two">Intermediate</option>
+					      <option>Expert</option>
 					    </select>
-					    <label>Materialize Select</label>
+					    <label>Skill Level</label>
 				</div>
 
-			</div> <!-- end col -->
+			</div> <!-- end dropdown col -->
 
 
 
 			 <button ng-click="buttonClick()" class="btn waves-effect waves-light" type="submit" name="action">Submit
-		    	<i class="material-icons right">send</i>
+		    	<i class="material-icons right"></i>
 		  	</button>
 
 
@@ -77,7 +82,7 @@
 			<h5>this is a bolded guidline</h5>
 			<p>additional informaiton about the guidline</p>
 
-	</div>
+	</div> <!-- column end -->
 
 
 </div> <!-- row end -->

@@ -1,0 +1,16 @@
+{
+	"initalStories": {
+		"uid": {
+			"storyName": "top location 1",
+			"storyImage": "www.image.com",
+		},
+		"uid2": {
+			"storyName": "our favorite gear",
+			"storyImage": "www.image2.com"
+		},
+		"uid3": {
+			"storyName": "top location 2",
+			"storyImage": "www.image2.com"
+		}
+	}
+}

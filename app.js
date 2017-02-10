@@ -31,12 +31,16 @@ app.config(function($routeProvider, $locationProvider) {
 		controller: 'WriteStoryCtrl',
 		templateUrl: 'partials/writeStory.html'
 	})
+	.otherwise({
+		redirectTo: '/'
+	})
 
 
 })
 
-// dropdown options for writeStory
 
+
+// dropdown options for writeStory
   $(document).ready(function() {
     $('select').material_select();
   });

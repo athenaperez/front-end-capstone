@@ -1,14 +1,52 @@
 console.log("WriteStoryCtrl loaded 4")
 
+
+
 app.controller('WriteStoryCtrl', function($scope, firebaseFactory) {
+	$scope.data = {
+		dropDownOne: null
+	}
+	var image;
 	$scope.buttonClick = function() {
 		let data = {
 			title: $scope.inputTitle,
 			draw: $scope.theDraw,
 			pack: $scope.thePackList,
-			description: $scope.theDescription
+			description: $scope.theDescription,
+			dropDownOne: document.querySelector('#dropDownOne').value,
+			image: image
 		}
+
 		firebaseFactory.sendInput(data)
 		.then(console.log)
 	}
-})
+
+	// image upload
+	let storageRef = firebase.storage().ref();
+
+	let inputElement = document.getElementById('fileInput');
+
+	inputElement.addEventListener("change", handleFiles, false);
+
+	function handleFiles() {
+		console.log("sup handleFiles")
+		var fileList = this.files;
+			console.log("fileList[0]", fileList[0])
+			storageRef.child(fileList[0].name).put(fileList[0])
+				.then(function(snapshot) {
+					//getting the url
+					  storageRef.child(fileList[0].name).getDownloadURL()
+					    	.then(function(url) {
+					      var img = document.getElementById('upload-placeholder-img');
+					      image = url;
+					      img.src = url;
+					    })
+					    .catch(function(error) {
+					    })
+						console.log('Uploaded an image!!')
+				});
+	}
+
+});
+
+
