@@ -8,5 +8,8 @@ app.factory('firebaseFactory', function($http){
 		getInitialStories: function() {
 			return $http.get(`https://society-wild.firebaseio.com/initialStories.json`)
 		},
+		getLocationStories: function() {
+			return $http.get(`https://society-wild.firebaseio.com/stories.json`)
+		}
 	}
 })

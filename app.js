@@ -31,6 +31,10 @@ app.config(function($routeProvider, $locationProvider) {
 		controller: 'WriteStoryCtrl',
 		templateUrl: 'partials/writeStory.html'
 	})
+	.when('/myfavorites', {
+		controller: 'FavoritesCtrl',
+		templateUrl: 'partials/myfavorites.html'
+	})
 	.otherwise({
 		redirectTo: '/'
 	})
