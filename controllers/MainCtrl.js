@@ -27,9 +27,14 @@ app.controller('MainCtrl', function($scope, firebaseFactory, $http) {
 	$scope.addFavorites = function(key) {
 		$http.patch(`https://society-wild.firebaseio.com/stories/${key}/.json`, {favorite: true})
 		.then(console.log)
-		.then(Materialize.toast('Added to your favorites!', 4000))
-
+		.then(Materialize.toast('Added to your favorites!', 3000))
 	}
+	$scope.deleteStory = function(key) {
 
+    	if (confirm("Are you sure you want to delete this location?")) {
+		$http.delete(`https://society-wild.firebaseio.com/stories/${key}.json`)
+		.then(console.log)
+		}
+	}
 })
 

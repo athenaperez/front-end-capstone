@@ -14,6 +14,7 @@ app.controller('FavoritesCtrl', function($scope, $http, firebaseFactory) {
 	$scope.removeFavorites = function(key) {
 		$http.patch(`https://society-wild.firebaseio.com/stories/${key}/.json`, {favorite: false})
 			.then(console.log)
+			.then(Materialize.toast('Removed from you favorites', 3000))
 	}
 
 })

@@ -10,6 +10,8 @@ app.factory('firebaseFactory', function($http){
 		},
 		getLocationStories: function() {
 			return $http.get(`https://society-wild.firebaseio.com/stories.json`)
-		}
+		},
+
+
 	}
 })

@@ -18,12 +18,30 @@
 	  </nav>
 	</div>
 
-<h3>My FAVORITES</h3>
 
-<div ng-repeat="myFavorite in favorites" ng-if="myFavorite.favorite === true">
 
-	<p>{{myFavorite.title}}</p>
+<!-- __________________________________ -->
+<!-- header image -->
+<img src="/css/img/header3.jpg" class="header-secondary-img">
 
-	<i ng-click="removeFavorites(key)" class="small material-icons cursor">thumb_down</i>
 
+<h5 class="society">My FAVORITES</h5>
+
+<div class="row bottom-cards">
+	<div ng-repeat="(key, myFavorite) in favorites" ng-if="myFavorite.favorite === true" class="offset-s1 col l4">
+		<div class="card">
+            	<div class="card-image">
+              		<img ng-src="{{myFavorite.image}}">
+              			<span class="card-title red-text">{{myFavorite.title}}</span>
+            	</div>
+            	<div class="card-content">
+              		<p>{location from geomap}</p>
+              	</div>
+              	<div class="card-action">
+					<i ng-click="removeFavorites(key)" class="small material-icons cursor">thumb_down</i>
+				</div>
+        </div>
+	</div>
 </div>
+
+

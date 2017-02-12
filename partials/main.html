@@ -1,27 +1,24 @@
 <!-- __NAV BAR____________________ -->
-	<div class="navbar-fixed">
-	  <nav>
+<div class="navbar-fixed">
+	<nav>
 	    <div class="nav-wrapper white">
 
-	      <a href="#" class="brand-logo black-text">Logo</a>
+	    	<a href="#" class="brand-logo black-text">Logo</a>
 
-	      <ul id="nav-mobile" class="right hide-on-med-and-down">
+	     	<ul id="nav-mobile" class="right hide-on-med-and-down">
 
-	        <li><a href="/" class="black-text">Home</a></li>
-	        <li><a href="#/writestory" class="black-text">Write a Story</a></li>
-	        <li><a href="/#/mypage" class="black-text">My Story</a></li>
+	    		<li><a href="/" class="black-text">Home</a></li>
+	        	<li><a href="#/writestory" class="black-text">Write a Story</a></li>
+	        	<li><a href="/#/mypage" class="black-text">My Story</a></li>
 
+				<button data-target="modalLogin" class="waves-effect waves-light btn" ng-click="loginButton()">login</button>
 
+				<a class="waves-effect waves-light btn" ng-click="joinButton()" href="#modalRegister">join</a>
 
-
-			<button data-target="modalLogin" class="waves-effect waves-light btn" ng-click="loginButton()">login</button>
-			<a class="waves-effect waves-light btn" ng-click="joinButton()" href="#modalRegister">join</a>
-
-	      </ul>
-	      </span>
+	      	</ul>
 	    </div>
-	  </nav>
-	</div>
+	</nav>
+</div>
 
 
 
@@ -124,7 +121,8 @@
             	<div class="card-action">
 
               		<i ng-click="addFavorites(key)" class="small material-icons cursor">add</i>
-<!--               		<i class="small material-icons">thumb_up</i> -->
+
+					<i ng-click="deleteStory(key)" class="small material-icons cursor">delete</i>
 
             	</div>
 
