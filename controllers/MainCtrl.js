@@ -16,6 +16,7 @@ app.controller('MainCtrl', function($scope, firebaseFactory, $http) {
 			console.log($scope.locationList)
 		})
 
+
 // testing login/register functions
 	$scope.loginButton = function() {
 		console.log("login button works")
@@ -32,9 +33,13 @@ app.controller('MainCtrl', function($scope, firebaseFactory, $http) {
 	$scope.deleteStory = function(key) {
 
     	if (confirm("Are you sure you want to delete this location?")) {
-		$http.delete(`https://society-wild.firebaseio.com/stories/${key}.json`)
-		.then(console.log)
+		$http.delete(`https://society-wild.firebaseio.com/stories/${key}/.json`)
+		// .then(function(){
+		// 	document.getElementById()
+		// })
 		}
+
+
 	}
 })
 

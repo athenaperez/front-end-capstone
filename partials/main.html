@@ -84,6 +84,7 @@
 <!-- header image -->
 <img src="/css/img/canada2.gif" class="header-main-img">
 
+
 <!-- top stories -->
 <div class="row top-cards">
 	<div ng-repeat="story in storyList" class="col l3">
@@ -101,6 +102,7 @@
 </div>
 
 
+<!-- dynamically added stories -->
 <h5 class="society">Society...</h5>
 
     <div class="row bottom-cards">
@@ -108,8 +110,10 @@
           	<div class="card">
 
             	<div class="card-image">
-              		<img ng-src="{{location.image}}">
-              			<span class="card-title red-text">{{location.title}}</span>
+              		<a href="/#/story/{{key}}">
+              			<img ng-src="{{location.image}}">
+              				<span class="card-title red-text">{{location.title}}</span>
+              		</a>
             	</div>
 
             	<div class="card-content">

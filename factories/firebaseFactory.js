@@ -11,7 +11,8 @@ app.factory('firebaseFactory', function($http){
 		getLocationStories: function() {
 			return $http.get(`https://society-wild.firebaseio.com/stories.json`)
 		},
-
-
+		getStory: function(key) {
+			return $http.get(`https://society-wild.firebaseio.com/stories/${key}.json`)
+		}
 	}
 })
