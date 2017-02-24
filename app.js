@@ -1,10 +1,7 @@
-console.log("app.js is loaded 1")
-
 const app = angular.module('societyWildApp', ['ngRoute'])
 
 app.config(function($routeProvider, $locationProvider) {
 	$locationProvider.hashPrefix('');
-
 
 
 // initialize firebase
@@ -47,12 +44,8 @@ app.config(function($routeProvider, $locationProvider) {
 		redirectTo: '/'
 	})
 
-
 })
 
 
 
-// dropdown options for writeStory
-  $(document).ready(function() {
-    $('select').material_select();
-  });
+

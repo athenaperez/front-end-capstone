@@ -1,35 +1,41 @@
+
 <!-- __NAV BAR____________________ -->
-<div class="navbar-fixed">
-	<nav>
-	    <div class="nav-wrapper white">
+	<div class="navbar-fixed">
+		<nav>
+		    <div class="nav-wrapper white">
 
-	    	<a href="#" class="brand-logo black-text">Logo</a>
+		    	<a href="#" class="brand-logo black-text">Logo</a>
 
-	     	<ul id="nav-mobile" class="right hide-on-med-and-down">
+		     	<ul id="nav-mobile" class="right hide-on-med-and-down">
 
-	    		<li><a href="/" class="black-text">Home</a></li>
-	        	<li><a href="#/writestory" class="black-text">Write a Story</a></li>
-	        	<li><a href="#/story" class="black-text">Clicked Story, TBR</a></li>
-	        	<li><a href="/#/mypage" class="black-text">My Story</a></li>
+		    		<li><a href="/" class="black-text">Home</a></li>
+		        	<li><a href="#/writestory" class="black-text">Write a Story</a></li>
+		        	<li><a href="/#/mypage" class="black-text">My Story</a></li>
 
-				<button data-target="modalLogin" class="waves-effect waves-light btn" ng-click="loginButton()">login</button>
+					<button data-target="modalLogin" class="waves-effect waves-light btn" ng-click="loginButton()">login</button>
 
-				<a class="waves-effect waves-light btn" ng-click="joinButton()" href="#modalRegister">join</a>
+					<a class="waves-effect waves-light btn" ng-click="joinButton()" href="#modalRegister">join</a>
 
-	      	</ul>
-	    </div>
-	</nav>
-</div>
-
+		      	</ul>
+		    </div>
+		</nav>
+	</div>
 
 
-<h1>{{storyInfo.title}}</h1>
-<img src={{storyInfo.image}}>
-<h4>why here?</h4>
-<p>{{storyInfo.draw}}</p>
-<h5>don't forget:</h5>
-<p>{{storyInfo.pack}}</p>
-<h5>Level:</h5>
-<p>{{storyInfo.dropDownOne}}</p>
 
+<!-- displaying clicked story -->
+	<h1 class="titles">{{storyInfo.title}}</h1>
+		<img src={{storyInfo.image}}>
+
+	<h4 class="titles">why here?</h4>
+		<p class="red-text">{{storyInfo.draw}}</p>
+
+	<h5 class="titles">don't forget:</h5>
+		<p class="red-text">{{storyInfo.pack}}</p>
+
+	<h5 class="titles">Level:</h5>
+		<p class="red-text">{{storyInfo.dropDownOne}}</p>
+
+<!-- add to favorites button -->
+	<i ng-click="addFavorites(key)" class="small material-icons cursor">add</i>
 

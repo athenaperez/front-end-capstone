@@ -1,3 +1,4 @@
+
 <!-- __NAV BAR____________________ -->
 	<div class="navbar-fixed">
 	  <nav>
@@ -12,18 +13,74 @@
 	        <li><a href="/#/mypage" class="black-text">My Story</a></li>
 	        <li><a href="/#/myfavorites" class="black-text">My Favorites</a></li>
 
-	        	<li><a href="#/story" class="black-text">Clicked Story, TBR</a></li>
-
+<!-- logout button -->
 	       	<button class="waves-effect waves-light btn" ng-click="logoutButton()">logout</button>
 
 
+          <li><a href="" class="black-text">Hello, {{userInformation.firstName}}</a></li>
+
 	      </ul>
-	      </span>
 	    </div>
 	  </nav>
 	</div>
 
 
-<h3>MY PAGE This is where page directed once user signs in</h3>
+<!-- ____________________________ -->
+<!-- header image -->
+  <img src="https://s-media-cache-ak0.pinimg.com/originals/57/ec/5c/57ec5cbefbe797074b97ac1d9a201b58.jpg" class="header-secondary-img">
+
+  <h3>MY PAGE This is where page directed once user signs in</h3>
+
+
+<!-- top stories -->
+  <div class="row top-cards">
+  	<div ng-repeat="story in storyList" class="col l3">
+  	 	<div class="card">
+          	<div class="card-image">
+            		<img ng-src="{{story.storyImage}}">
+            			<span class="card-title">
+  						<a href="#">
+            					<h5> {{story.storyName}}</h5>
+            				</a>
+            			</span>
+          	</div>
+      	</div>
+  	</div>
+  </div>
+
+
+<!-- dynamically added stories -->
+  <h5 class="society">Society...</h5>
+
+      <div class="row bottom-cards">
+       	<div ng-repeat="(key, location) in locationList" class="offset-s1 col l4">
+            	<div class="card">
+
+              	<div class="card-image">
+                		<a href="/#/story/{{key}}">
+                			<img ng-src="{{location.image}}">
+                				<span class="card-title red-text">{{location.title}}</span>
+                		</a>
+              	</div>
+
+              	<div class="card-content">
+                		<p>{location from geomap}</p>
+
+              	</div>
+
+              	<div class="card-action">
+
+                		<i ng-click="addFavorites(key)" class="small material-icons cursor">add</i>
+
+  					<i ng-click="deleteStory(key)" class="small material-icons cursor">delete</i>
+
+              	</div>
+
+            	</div>
+        	</div>
+      </div>
+<!-- end dynamically added stories -->
+
+
 
 

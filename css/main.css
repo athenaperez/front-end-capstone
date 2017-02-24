@@ -19,7 +19,7 @@ MAIN.HTML
 
 .header-main-img {
 	width: 100%;
-	height: 500px;
+	height: 400px;
 }
 
 .top-cards {
@@ -104,6 +104,10 @@ WRITESTORY.HTML
 	height: 250px;
 }
 
+button.display-block {
+	display: block;
+}
+
 /************************
 FORMS
 ************************/
@@ -114,10 +118,18 @@ textarea {
 }
 
 
+/************************
+OPENED CARDS
+************************/
 
+.titles {
+	color: grey;
+	text-decoration: underline;
+}
 
-
-
+.red-text {
+	color: red;
+}
 
 
 
