@@ -41,7 +41,6 @@ app.controller('WriteStoryCtrl', function($scope, firebaseFactory, $location) {
 			}
 
 
-
 	//firebaseFactory - send data to firebase
 			firebaseFactory.sendInput(data)
 			.then(function(data){
@@ -84,16 +83,17 @@ app.controller('WriteStoryCtrl', function($scope, firebaseFactory, $location) {
 						    .catch(function(error) {
 						    })
 					});
+
 		}
 	// ________END IMAGE UPLOAD AND DISPLAY_______________
-
-
-});
-
-
 // dropdown options for writeStory
   $(document).ready(function() {
     $('select').material_select();
   });
+
+});
+
+
+
 
 
