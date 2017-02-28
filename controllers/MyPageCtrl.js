@@ -8,6 +8,7 @@ app.controller('MyPageCtrl', function($scope, $http, firebaseFactory, logoutFact
 		$scope.storyList = val.data
 		})
 
+
 // ______________________________________________________
 //checks to see if user logs in or out
 	firebase.auth().onAuthStateChanged(function(user) {

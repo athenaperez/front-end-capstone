@@ -2,27 +2,32 @@
 <!-- __NAV BAR____________________ -->
 <div class="navbar-fixed">
 	<nav>
-	    <div class="nav-wrapper white">
+	    <div class="nav-wrapper white navigation-spacing">
 
-	    	<a href="#" class="brand-logo black-text">Logo</a>
 
-	     	<ul id="nav-mobile" class="right hide-on-med-and-down">
+	     	<ul id="nav-mobile" class="left hide-on-med-and-down">
 
-	    		<li><a href="/" class="black-text">Home</a></li>
+	     		<li><img src="css/img/society-logo-1.png" class="navigation-logo img-logo"></li>
 
-	        	<li><a href="#/writestory" class="black-text">Write a Story</a></li>
+	    		<li class="active"><a href="/" class="black-text nav-center">Home</a></li>
 
-	        	<li><a href="/#/mypage" class="black-text">My Story, TBDFTP</a></li>
+	        	<li><a href="#/writestory" class="black-text nav-center">Write a Story</a></li>
 
-	        	<li><a href="/#/myfavorites" class="black-text">My Favorites, TBDFTP</a></li>
+	        	<li><a href="/#/mypage" class="black-text nav-center">My Stories</a></li>
+	        </ul>
 
-	        	<li><a href="" class="black-text"> {{userInformation.firstName}}</a></li>
+<!-- 	        	<li><a href="/#/myfavorites" class="black-text">My Favorites, TBDFTP</a></li> -->
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+	        	<div class="chip">
+					<img src="/css/img/scott.png" alt="Contact Person">
+					    {{userInformation.firstName}}
+				</div>
 
-				<button data-target="modalLogin" class="waves-effect waves-light btn" ng-click="loginPopup()">login</button>
+				<a data-target="modalLogin" class="waves-effect waves-light btn" ng-click="loginPopup()">login</a>
 
 				<a class="waves-effect waves-light btn" ng-click="joinPopup()" href="#modalRegister">join</a>
 
-
+			</ul>
 
 	      	</ul>
 	    </div>
@@ -30,9 +35,9 @@
 </div>
 
 
-  <!-- ___MODALS_______________________ -->
+<!-- ___MODALS_______________________ -->
 
-  <!-- login modal Structure -->
+<!-- login modal Structure -->
 	<div id="modalLogin" class="modal">
 
 	    <div class="modal-content">
@@ -47,7 +52,7 @@
 
 	</div>
 
-    <!-- register modal Structure -->
+<!-- register modal Structure -->
   <div id="modalRegister" class="modal">
     <div class="modal-content">
 		<h4>Join the Society...</h4>
@@ -70,18 +75,22 @@
 		   	<div class="col offset-s2 s8">
 		     	<input ng-model="registerUsername" type="text" name="userName" placeholder="Pick a User Name">
 		    </div>
-				<br>
+			<br>
 		   	<div class="col offset-s2 s8">
 		     	<input ng-model="registerPassword" type="password" name="password" placeholder="Password">
 		      	<input type="password" name="confirmPassword" placeholder="Confirm Password">
 		    </div>
+			<br>
+			<br>
 
-
-
-			    <div class="modal-footer">
-			      <a ng-click="joinButton()" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Join Us</a>
-			    </div>
+		    <div class="col modal-footer">
+		      <button ng-click="joinButton()" href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"><a href="/#/writestory">Join Us</a></button>
 		    </div>
+
+
+
+
+		</div> <!-- row end -->
 
 		</div>
 
@@ -92,27 +101,31 @@
   <!-- ___HEADER_________________________ -->
 
 <!-- header image -->
-<img src="https://s-media-cache-ak0.pinimg.com/originals/57/ec/5c/57ec5cbefbe797074b97ac1d9a201b58.jpg" class="header-main-img">
+<img src="/css/img/header-1a.jpg" class="header-main-img">
+
+<h4 class="header-text">A Community for Landscape Adventure  and Photography</h4>
 
 <!-- top stories -->
 <div class="row top-cards">
-	<div ng-repeat="story in storyList" class="col l3">
+	<div ng-repeat="story in storyList" class="col offset-s1 col l4">
 	 	<div class="card">
         	<div class="card-image">
           		<img ng-src="{{story.storyImage}}">
           			<span class="card-title">
 						<a href="#">
-          					<h5> {{story.storyName}}</h5>
+          					<h5 class="white-text">{{story.storyName}}</h5>
           				</a>
           			</span>
         	</div>
     	</div>
 	</div>
 </div>
+<br>
 
+<br>
+  <h5 class="society">Check out what we've been photographing - or sign up to contribute and customize The Society...</h5>
 
-
-  <h5 class="society">Society...</h5>
+<br>
 
       <div class="row bottom-cards">
        	<div ng-repeat="(key, location) in locationList" class="offset-s1 col l4">
@@ -121,20 +134,20 @@
               	<div class="card-image">
                 		<a href="/#/story/{{key}}">
                 			<img ng-src="{{location.image}}">
-                				<span class="card-title red-text">{{location.title}}</span>
+                				<span class="card-title white-text">{{location.title}}</span>
                 		</a>
               	</div>
 
               	<div class="card-content">
                 		<p>{location from geomap}</p>
-
               	</div>
 
               	<div class="card-action">
 
-                		<i ng-click="addFavorites(key, location.uid)" class="small material-icons cursor">add</i>
+            		<a ng-click="addFavorites(key, location.uid)" class="btn-floating btn-tiny waves-effect waves-light grey"><i class="material-icons">add</i></a>
 
-  					<i ng-click="deleteStory(key)" class="small material-icons cursor">delete</i>
+
+<!--   					<i ng-click="deleteStory(key)" class="small material-icons cursor">delete</i> -->
 
               	</div>
 

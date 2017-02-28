@@ -1,6 +1,8 @@
 body {
-	background-color: white;
-	color: royalblue;
+	background-color: #fefefe;
+	color: #4d4d4d;
+	font-family: futura;
+
 }
 
 
@@ -9,9 +11,47 @@ NAVIGATION
 ************************/
 
 nav {
+	height: 80px;
+}
+
+
+nav ul a {
+	width: 160px;
+}
+
+
+.navigation-logo {
+	height: 75px;
+	padding-left: 1%;
+	padding-right: 1%;
+	align-content: center;
+	padding-top: 8%;
+}
+
+.navigation-spacing {
+	padding-left: 1%;
+	padding-right: 1%;
 
 }
 
+.nav-center {
+	padding-top: 5%;
+	text-align: center;
+	font-size: 1.3em;
+	height: 80px;
+}
+
+.img-logo {
+	margin-right: 15px;
+}
+
+.header-text {
+	text-align: center;
+	text-shadow: 1px 1px 2px lightgrey;
+	margin-top: 3%;
+	font-family: frontage;
+	letter-spacing: -.25em;
+}
 
 /************************
 MAIN.HTML
@@ -19,17 +59,19 @@ MAIN.HTML
 
 .header-main-img {
 	width: 100%;
-	height: 400px;
+	height: 525px;
+	border-bottom: 1px solid #d9d9d9;
 }
 
 .top-cards {
-	margin-left: 16%;
+	margin-left: 14%;
 	margin-top: 1.5%;
 	width: 1500px;
+
 }
 
 .top-cards img {
- height: 200px;
+ height: 275px;
 }
 
 .bottom-cards {
@@ -38,12 +80,18 @@ MAIN.HTML
 }
 
 .bottom-cards img {
-	height: 250px;
+	height: 350px;
 }
 
 h5.society {
 	text-align: center;
 	margin-top: 2%;
+
+}
+
+.white-text {
+	color: white;
+	text-shadow: 1px 1px 1px black;
 }
 
 .card-box {
@@ -93,10 +141,33 @@ WRITESTORY.HTML
 	height: auto;
 }
 
+textarea.long {
+	height: 100px;
+}
+
 
 
 /************************
-WRITESTORY.HTML
+STORY.HTML
+************************/
+
+.img-center {
+	height: 500px;
+	width: 800px;
+	margin-left: 30%;
+}
+
+.text-center {
+	text-align: center;
+}
+
+
+
+
+
+
+/************************
+MYFAVORITES.HTML
 ************************/
 
 .header-secondary-img {
@@ -137,7 +208,9 @@ OPENED CARDS
 FOOTER
 ************************/
 
-
+footer {
+	font-family: sans-serif;
+}
 
 
 

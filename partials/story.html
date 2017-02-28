@@ -2,21 +2,29 @@
 <!-- __NAV BAR____________________ -->
 	<div class="navbar-fixed">
 		<nav>
-		    <div class="nav-wrapper white">
+		    <div class="nav-wrapper white navigation-spacing">
 
-		    	<a href="#" class="brand-logo black-text">Logo</a>
+	      		<ul id="nav-mobile" class="left hide-on-med-and-down">
 
-		     	<ul id="nav-mobile" class="right hide-on-med-and-down">
+	     			<li><img src="css/img/society-logo-1.png" class="navigation-logo img-logo"></li>
 
-		    		<li><a href="/" class="black-text">Home</a></li>
-		        	<li><a href="#/writestory" class="black-text">Write a Story</a></li>
-		        	<li><a href="/#/mypage" class="black-text">My Story</a></li>
+	        		<li><a href="/" class="black-text nav-center">Home</a></li>
 
-					<button data-target="modalLogin" class="waves-effect waves-light btn" ng-click="loginButton()">login</button>
+	        		<li class="active"><a href="#/writestory" class="black-text nav-center">Write a Story</a></li>
 
-					<a class="waves-effect waves-light btn" ng-click="joinButton()" href="#modalRegister">join</a>
+	        		<li><a href="/#/mypage" class="black-text nav-center">My Stories</a></li>
 
-		      	</ul>
+	        		<li><a href="/#/myfavorites" class="black-text nav-center">My Favorites</a></li>
+				</ul>
+
+				<div id="nav-mobile" class="right hide-on-med-and-down">
+					  <div class="chip">
+					    <img src="/css/img/scott.png" alt="Contact Person">
+					    {{userInformation.firstName}}
+					  </div>
+
+	       			<button class="waves-effect waves-light btn" ng-click="logoutButton()">logout</button>
+	    		</div>
 		    </div>
 		</nav>
 	</div>
@@ -24,18 +32,23 @@
 
 
 <!-- displaying clicked story -->
-	<h1 class="titles">{{storyInfo.title}}</h1>
-		<img src={{storyInfo.image}}>
+<div>
+	<h1 class="header-text">{{storyInfo.title}}</h1>
 
-	<h4 class="titles">why here?</h4>
-		<p class="red-text">{{storyInfo.draw}}</p>
+	<img src={{storyInfo.image}} class="img-center">
 
-	<h5 class="titles">don't forget:</h5>
-		<p class="red-text">{{storyInfo.pack}}</p>
+	<h4 class="text-center">Why Here?</h4>
 
-	<h5 class="titles">Level:</h5>
-		<p class="red-text">{{storyInfo.dropDownOne}}</p>
+	<p class="text-center">{{storyInfo.draw}}</p>
+
+	<h5 class="text-center">Don't Forget to Pack:</h5>
+		<p class="text-center">{{storyInfo.pack}}</p>
+
+	<h5 class="text-center">Level:</h5>
+		<p class="text-center">{{storyInfo.dropDownOne}}</p>
+</div>
+
 
 <!-- add to favorites button -->
-	<i ng-click="addFavorites(key)" class="small material-icons cursor">add</i>
+<!-- 	<i ng-click="addFavorites(key)" class="small material-icons cursor">add</i> -->
 

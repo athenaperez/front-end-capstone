@@ -1,51 +1,75 @@
 <!-- __NAV BAR____________________ -->
 <div class="navbar-fixed">
   <nav>
-    <div class="nav-wrapper white">
+    <div class="nav-wrapper white navigation-spacing">
 
-      <a href="#" class="brand-logo black-text">Logo</a>
+	      		<ul id="nav-mobile" class="left hide-on-med-and-down">
 
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+	     			<li><img src="css/img/society-logo-1.png" class="navigation-logo img-logo"></li>
 
-        <li><a href="/" class="black-text">Home</a></li>
 
-        <li><a href="#/writestory" class="black-text">Write a Story</a></li>
+	        		<li><a href="/" class="black-text nav-center">Home</a></li>
 
-        <li><a href="/#/mypage" class="black-text">My Story, TBDFTP</a></li>
+	        		<li class="active"><a href="#/writestory" class="black-text nav-center">Write a Story</a></li>
 
-        <li><a href="/#/myfavorites" class="black-text">My Favorites, TBDFTP</a></li>
+	        		<li><a href="/#/mypage" class="black-text nav-center">My Stories</a></li>
 
-          <li><a href="" class="black-text">Hello, {{userInformation.firstName}}</a></li>
+	        		<li><a href="/#/myfavorites" class="black-text nav-center">My Favorites</a></li>
+				</ul>
 
-        <button class="waves-effect waves-light btn" ng-click="logoutButton()">logout</button>
+				<div id="nav-mobile" class="right hide-on-med-and-down">
+					  <div class="chip">
+					    <img src="/css/img/scott.png" alt="Contact Person">
+					    {{userInformation.firstName}}
+					  </div>
 
-      </ul>
-      </span>
+	       			<button class="waves-effect waves-light btn" ng-click="logoutButton()">logout</button>
+	    		</div>
+
     </div>
   </nav>
 </div>
 
-<h3>ADD A NEW LOCATION</h3>
+<h4 class="header-text">ADD A NEW LOCATION</h4>
 
-<p>(specific info about locations) Locations are detailed guides about a specific location, camping spot, or hike to guide Society members on their own photography adventure.</p>
+<h5 class="society">Locations are detailed guides about a specific location, camping spot, or hike to guide Society members on their own photography adventure.</h5>
+
+<br>
 
 <div class="row">
 	<div class="offset-s2 col s5">
 
+<br>
+<br>
 			<textarea ng-model="inputTitle" placeholder="TITLE">Title</textarea>
 
+<br>
+<br>
+
 			<a class="waves-effect waves-light btn">Add a Location/Google Maps connection</a>
+
+<br>
+<br>
+<br>
 
 			<img src="/css/img/header2.jpg" id="upload-placeholder-img">
 
 			<input type="file" name="photo" id="fileInput">
 
+<br>
+<br>
+
 			<div class="col s7">
-			<textarea ng-model="theDraw" placeholder="The Draw">The Draw</textarea>
+			<label>Title</label>
+			<textarea ng-model="theDraw" class="long" placeholder="Please provide us with 1-2 sentences why this place is awesome and why someone would want to go.">The Draw</textarea>
 
-			<textarea ng-model="theDescription" placeholder="Description">Description</textarea>
+<br>
+			<label>Description</label>
+			<textarea ng-model="theDescription" class="long" placeholder="Description">Description</textarea>
 
-			<textarea ng-model="thePackList" placeholder="Pack List">Pack List</textarea>
+<br>
+			<label>Pack List</label>
+			<textarea ng-model="thePackList" class="long" placeholder="Pack List">Pack List</textarea>
 			</div>
 
 <!-- drop downs -->
@@ -83,14 +107,22 @@
 
 
 	<div class="offset-s1 col s2">
-			<h5>this is a bolded guidline</h5>
-			<p>additional informaiton about the guidline</p>
+
+	<br>
+	<br>
+			<h5>Be Specific.</h5>
+			<p>
+			We're using your location information for driving directions, so starting trailheads, parking lots, and campgrounds are best.</p>
 			<br>
-			<h5>this is a bolded guidline</h5>
-			<p>additional informaiton about the guidline</p>
+			<h5>Be Descriptive.</h5>
+			<p>
+			Focus on what makes this a can't miss experience. The more detail you add, the easier it is for someone else to find and photograph your adventure!</p>
 			<br>
-			<h5>this is a bolded guidline</h5>
-			<p>additional informaiton about the guidline</p>
+			<h5>Find Hidden Gems.</h5>
+			<p>
+			We're counting on your local knowledge to help us unearth the truly hidden gems. If you're open to sharing one of your favorite adventures, we'd love to see it on the site.
+
+</p>
 
 	</div> <!-- column end -->
 

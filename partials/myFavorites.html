@@ -1,35 +1,45 @@
 
 <!-- __NAV BAR____________________ -->
 	<div class="navbar-fixed">
-	  <nav>
-	    <div class="nav-wrapper white">
+	  	<nav>
+	    	<div class="nav-wrapper white navigation-spacing">
 
-	      <a href="#" class="brand-logo black-text">Logo</a>
 
-	      <ul id="nav-mobile" class="right hide-on-med-and-down">
 
-	        <li><a href="/" class="black-text">Home</a></li>
-	        <li><a href="#/writestory" class="black-text">Write a Story</a></li>
-	        <li><a href="/#/mypage" class="black-text">My Story</a></li>
+	      		<ul id="nav-mobile" class="left hide-on-med-and-down">
 
-          	<li><a href="" class="black-text">Hello, {{userInformation.firstName}}</a></li>
+	     			<li><img src="css/img/society-logo-1.png" class="navigation-logo img-logo"></li>
+	    <!--  			<li><img src="css/img/society-logo-2.png" class="navigation-logo"></li> -->
 
-	       	<button class="waves-effect waves-light btn" ng-click="logoutButton()">logout</button>
+	        		<li><a href="/" class="black-text nav-center">Home</a></li>
 
-	      </ul>
-	      </span>
-	    </div>
-	  </nav>
+	        		<li><a href="#/writestory" class="black-text nav-center">Write a Story</a></li>
+
+	        		<li><a href="/#/mypage" class="black-text nav-center">My Stories</a></li>
+
+	        		<li class="active"><a href="/#/myfavorites" class="black-text nav-center">My Favorites</a></li>
+				</ul>
+
+				<div id="nav-mobile" class="right hide-on-med-and-down">
+					  <div class="chip">
+					    <img src="/css/img/scott.png" alt="Contact Person">
+					    {{userInformation.firstName}}
+					  </div>
+
+	       			<button class="waves-effect waves-light btn" ng-click="logoutButton()">logout</button>
+	    		</div>
+
+	    	</div>
+	  	</nav>
 	</div>
-
 
 
 <!-- __________________________________ -->
 <!-- header image -->
-	<img src="http://www.f-covers.com/cover/desert-sand-landscape-facebook-cover-timeline-banner-for-fb.jpg" class="header-secondary-img">
+	<img src="/css/img/header-desert.jpg" class="header-secondary-img">
 
 
-	<h5 class="society">My FAVORITES</h5>
+	<h4 class="header-text">My Favorties</h4>
 
 
 <!-- display favorites -->
@@ -39,14 +49,14 @@
 	            	<div class="card-image">
 	            		<a href="/#/story/{{key}}">
 	              			<img ng-src="{{myFavorite.image}}">
-	              				<span class="card-title red-text">{{myFavorite.title}}</span>
+	              				<span class="card-title white-text">{{myFavorite.title}}</span>
 	              		</a>
 	            	</div>
 	            	<div class="card-content">
 	              		<p>{location from geomap}</p>
 	              	</div>
 	              	<div class="card-action">
-						<i ng-click="removeFavorites(key)" class="small material-icons cursor">thumb_down</i>
+						<a ng-click="removeFavorites(key)" class="btn-floating btn-tiny waves-effect waves-light grey"><i class="material-icons">thumb_down</i></a>
 					</div>
 	        </div>
 		</div>

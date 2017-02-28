@@ -2,24 +2,29 @@
 <!-- __NAV BAR____________________ -->
 	<div class="navbar-fixed">
 	  <nav>
-	    <div class="nav-wrapper white">
+	    <div class="nav-wrapper white navigation-spacing">
 
-	      <a href="#" class="brand-logo black-text">Logo</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
 
-	      <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><img src="css/img/society-logo-1.png" class="navigation-logo img-logo"></li>
 
-	        <li><a href="/" class="black-text">Home</a></li>
-	        <li><a href="#/writestory" class="black-text">Write a Story</a></li>
-	        <li><a href="/#/mypage" class="black-text">My Story</a></li>
-	        <li><a href="/#/myfavorites" class="black-text">My Favorites</a></li>
+              <li><a href="/" class="black-text nav-center">Home</a></li>
 
-<!-- logout button -->
-	       	<button class="waves-effect waves-light btn" ng-click="logoutButton()">logout</button>
+              <li><a href="#/writestory" class="black-text nav-center">Write a Story</a></li>
 
+              <li class="active"><a href="/#/mypage" class="black-text nav-center">My Stories</a></li>
 
-          <li><a href="" class="black-text">Hello, {{userInformation.firstName}}</a></li>
+              <li><a href="/#/myfavorites" class="black-text nav-center">My Favorites</a></li>
+        </ul>
 
-	      </ul>
+        <div id="nav-mobile" class="right hide-on-med-and-down">
+            <div class="chip">
+              <img src="/css/img/scott.png" alt="Contact Person">
+              {{userInformation.firstName}}
+            </div>
+
+              <button class="waves-effect waves-light btn" ng-click="logoutButton()">logout</button>
+          </div>
 	    </div>
 	  </nav>
 	</div>
@@ -29,12 +34,13 @@
 <!-- header image -->
   <img src="https://s-media-cache-ak0.pinimg.com/originals/57/ec/5c/57ec5cbefbe797074b97ac1d9a201b58.jpg" class="header-secondary-img">
 
-  <h3>MY PAGE This is where page directed once user signs in</h3>
+<!-- <h4 class="header-text">Society Wild</h4> -->
+
 
 
 <!-- top stories -->
-  <div class="row top-cards">
-  	<div ng-repeat="story in storyList" class="col l3">
+<!--   <div class="row top-cards">
+  	<div ng-repeat="story in storyList" class="col offset-s1 col l4">
   	 	<div class="card">
           	<div class="card-image">
             		<img ng-src="{{story.storyImage}}">
@@ -46,12 +52,11 @@
           	</div>
       	</div>
   	</div>
-  </div>
+  </div> -->
 
 
+<h4 class="header-text">My Stories</h4>
 <!-- dynamically added stories -->
-  <h5 class="society">Society...</h5>
-
       <div class="row bottom-cards">
        	<div ng-repeat="(key, location) in locationList" class="offset-s1 col l4">
             	<div class="card">
@@ -59,7 +64,7 @@
               	<div class="card-image">
                 		<a href="/#/story/{{key}}">
                 			<img ng-src="{{location.image}}">
-                				<span class="card-title red-text">{{location.title}}</span>
+                				<span class="card-title white-text">{{location.title}}</span>
                 		</a>
               	</div>
 
@@ -70,9 +75,11 @@
 
               	<div class="card-action">
 
-                		<i ng-click="addFavorites(key)" class="small material-icons cursor">add</i>
 
-  					<i ng-click="deleteStory(key)" class="small material-icons cursor">delete</i>
+
+<!--                 		<i ng-click="addFavorites(key)" class="small material-icons cursor">add</i> -->
+
+  					<a ng-click="deleteStory(key)" class="btn-floating btn-tiny waves-effect waves-light red"><i class="material-icons">delete</i></a>
 
               	</div>
 

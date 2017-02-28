@@ -10,11 +10,16 @@ app.controller('MainCtrl', function($scope, firebaseFactory, $http) {
 			$scope.storyList = val.data
 		})
 
+
+
+
+// __________________________________________
 // retrieve stories from firebase and make available for poulating
 	firebaseFactory.getAllLocationStories()
 		.then(function(val) {
 			$scope.locationList = val.data
 		})
+
 
 //checks for logged in user to display hello
 	firebase.auth().onAuthStateChanged(function(user) {
@@ -28,6 +33,10 @@ app.controller('MainCtrl', function($scope, firebaseFactory, $http) {
 	})
 
 
+
+
+
+// __________________________________________
 //register functions
 	$scope.loginButton = function() {
 		firebase.auth().signInWithEmailAndPassword($scope.loginUsername, $scope.loginPassword).catch(function(error) {
