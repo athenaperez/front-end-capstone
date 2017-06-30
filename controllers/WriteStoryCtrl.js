@@ -86,6 +86,7 @@ app.controller('WriteStoryCtrl', function($scope, firebaseFactory, $location) {
 
 		}
 	// ________END IMAGE UPLOAD AND DISPLAY_______________
+
 // dropdown options for writeStory
   $(document).ready(function() {
     $('select').material_select();
