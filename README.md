@@ -9,13 +9,12 @@
 <br>A CRUD application:
 <li>Create stories</li>
 <li>Naviagate and read all user's submitted stories on the front page</li>
-<li>Update stories - add stories to your 'Favorites', delete stories and remove from your 'Favorites'</li>
+<li>Update stories - add stories to your 'Favorites'</li>
+<li>Delete stories and remove from your 'Favorites'</li>
 <li>Functioning authentication, handled by Firebase</li>
 <li>Built using HTML, CSS, JavaScript, JQuery, AngularJS, Materialize, and Firebase</li>
 </p>
 
-
-<br>
 <br>
 <br>
 Trello board: 		https://trello.com/b/Gn4wlcJM
